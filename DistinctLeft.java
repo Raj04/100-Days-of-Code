@@ -6,19 +6,16 @@ import java.util.*;
 public class DistinctLeft {
 	
 	public static int FindDistinctCount(int[] arr, int n,int k) {
-		/*Your class should be named solution. 
-		*Don't write main().
-		*Don't take input, it is passed as function argument.
-		*Don't print output.
-		*Taking input and printing output is handled automatically.
-		*/ 
+		
+        //converting int[]to Integer[]
         Integer[] what = Arrays.stream( arr ).boxed().toArray( Integer[]::new );
         Set<Integer> set=new HashSet<>();
         Arrays.sort(what,Collections.reverseOrder());
         for(int i=k;i<n;i++){
+            //adding only after kth max elements
             set.add(what[i]);
         }
-        
+        //since set will not allow duplicates so printing the size of it  
 		return set.size();
 	}
 	
