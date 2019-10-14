@@ -11,7 +11,8 @@ class MoveZero {
         int temp=0;
         int arr[]={ 6, 0, 8, 2, 3, 0, 4, 0, 1};
         for(int i=0;i<arr.length;i++){
-            //putting the if condition here is a mistake as 
+		//we will check if current_element is Zero and swap with next non zero element
+		//arr[j]!=0 condition is responsible for the swap only for non zero element
                 for(int j=i+1;j<arr.length;j++){
                     if(arr[i]==0 && arr[j]!=0){
                         temp=arr[i];
